@@ -104,6 +104,6 @@ Here the tag starts from <authorize></authorize>. The attributes description is 
 2. `access-type`: Same as above (in case of URL/State security part in description).
 
 
-The demo application is hosted at [Github](https://github.com/NicksMehta)
+The demo application is hosted at [Github](https://github.com/NicksMehta/AngularSecurity)
 
 Buy me a Beer :beer:
