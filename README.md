@@ -22,6 +22,12 @@ I'm a Javas' Spring Framework freak so I tried to create a tag(directive) in ord
 * [ui-router](https://github.com/angular-ui/ui-router) as the routing engine.
 * [lodash](https://lodash.com/) or [underscore](http://underscorejs.org/) ([lodash](https://lodash.com/) is recommended).
 
+### Download
+You can download it from bower:
+
+```sh
+bower install AngularSecurity
+```
 
 ### Usage
 1. Include `AngularSecurity.js` file in your project.
@@ -58,7 +64,7 @@ angular.module('some.module', ['AngularSecurityManagerConstants'])
       }
     }
    }]);
- ```
+```
 
 Here second line giving the meta for `AngularSecurity`. The description is as follows:
 The `access` object have the actual meta information about security.
