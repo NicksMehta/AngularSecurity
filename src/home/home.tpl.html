@@ -1,0 +1,15 @@
+<div class="well text-center"><h4>This is the home page.</h4></div>
+<a ui-sref="login">Back to Login page.</a>
+<br />
+Try to change the access roles by opening the <b>home.tpl.html</b> file in folder <b>src/home/home.tpl.html</b> <br /> <br /> <br />
+<authorize access="['ROLE_ADMIN', 'ROLE_EDITOR']" access-type="'hasAnyRole'">
+	Admin and Editor content will go here..
+</authorize>
+
+<authorize access="['ROLE_ADMIN']" access-type="'hasRole'">
+	Admin only content....
+</authorize>
+<br /><br />
+<authorize access="['ROLE_EDITOR']" access-type="'hasRole'">
+	Editor only content.
+</authorize>

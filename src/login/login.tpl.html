@@ -1,0 +1,16 @@
+<div class="col-md-4 col-md-offset-4 margin-top-60 bordered-box">
+	<h3>Login</h3>
+	<form ng-submit="login(creds)">
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="Email" ng-model="creds.username" />
+		</div>
+		<div class="form-group">
+			<input type="password" class="form-control" placeholder="Password" ng-model="creds.password">
+		</div>
+		<div class="form-group">
+			<button class="btn btn-primary btn-block">Sign In</button>
+		</div>
+		<a ui-sref="home">Go directly to Home</a>
+		<a ui-sref="logout" ng-if="isAuthenticated" class="pull-right">Logout</a>  
+	</form>
+</div>
