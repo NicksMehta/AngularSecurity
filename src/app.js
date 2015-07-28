@@ -8,7 +8,7 @@ angular.module( 'springneo', [
 ])
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, AngularSecurityManagerProvider) {
   $urlRouterProvider.otherwise( '/home' );
-  AngularSecurityManagerProvider.setConfig({ userAuthService: 'AuthenticationService', sessionService: 'SessionService', unAuthroizeState: 'login', forbiddenState: 'forbidden' });
+  AngularSecurityManagerProvider.setConfig({ userAuthService: 'AuthenticationService', sessionService: 'SessionService', unAuthorizeState: 'login', forbiddenState: 'forbidden' });
 })
 .controller( 'AppCtrl', function AppCtrl ( $scope, $location ) {
 });
