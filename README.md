@@ -33,12 +33,15 @@ bower install AngularSecurity
 1. Include `AngularSecurity.js` file in your project.
 2. Inject Module in main module `AngularSecurityManager`.
 3. Configure like below:
-	1. Inject `AngularSecurityManagerProvider` in your apps' config method.
+    1. Inject `AngularSecurityManagerProvider` in your apps' config method.
 	2. Define three settings:
 	
-	   a) **userAuthService**: Your user authentication service. This service MUST expose a method `isAuthenticated` which will return boolean.
+	   a) **userAuthService**: Your user authentication service. This service MUST expose the following methods:
+>`isAuthenticated`: will return true if user is authenticated, false otherwise.
+>
+>`getAuthenticatedUser`: will return the user object having authorities and other properties.
        
-       b) **unAuthroizeState**: The state on which the user will be redirected on accessing the secure pages without log in(basically it will be the **login state**).
+       b) **unAuthorizeState**: The state on which the user will be redirected on accessing the secure pages without log in(basically it will be the **login state**).
        
        c) **forbiddenState**: The state on which the user will be redirected on accessing the secure pages of which he/she is not authorize (basically it will be the **403 state**).
        
@@ -57,7 +60,7 @@ angular.module('some.module', ['AngularSecurityManagerConstants'])
   $stateProvider.state( 'home', {
     url: '/home',
     params: { access: { 'public' : false, authStrategy: INTERCEPT_STRATEGY.ROLES, hasRoles: ['ROLE_ADMIN', 'ROLE_CREATE_USER'], accessType: ACCESS_TYPE.HAS_ANY_ROLE } },
-    views: {
+    views: {m
       main: {
         controller: 'HomeCtrl',
         templateUrl: 'home/home.tpl.html'
