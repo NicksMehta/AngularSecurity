@@ -98,7 +98,7 @@ For security tag, an example is shown as below: :thumbsup:
 	<authorize access="['ROLE_VISITOR']" access-type="'hasNoRoles'">
 		Non Visitor content will go here..
 	</authorize>
-	<authorize access="['ROLE_ADMIN, ROLE_EDITOR']" access-type="'hasAnyRole'">
+	<authorize access="['ROLE_ADMIN', 'ROLE_EDITOR']" access-type="'hasAnyRole'">
 		Admin and Editor content will go here..
 	</authorize>
 ```
