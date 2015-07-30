@@ -47,9 +47,9 @@ bower install AngularSecurity
        
        As an complete example, let's have a look on the following snippet
 	```javascript
-		AngularSecurityManagerProvider.setConfig({ userAuthService: 'AuthenticationService', unAuthroizeState: 'login', forbiddenState: 'forbidden' });
+		AngularSecurityManagerProvider.setConfig({ userAuthService: 'AuthenticationService', unAuthorizeState: 'login', forbiddenState: 'forbidden' });
     ```
-    **Here *unAuthroizeState* and *forbiddenState* are the `states`.
+    **Here *unAuthorizeState* and *forbiddenState* are the `states`.
 
 
 Now the Controller part comes, lets' have a look on what needs to be done on `state` controller:
@@ -60,7 +60,7 @@ angular.module('some.module', ['AngularSecurityManagerConstants'])
   $stateProvider.state( 'home', {
     url: '/home',
     params: { access: { 'public' : false, authStrategy: INTERCEPT_STRATEGY.ROLES, hasRoles: ['ROLE_ADMIN', 'ROLE_CREATE_USER'], accessType: ACCESS_TYPE.HAS_ANY_ROLE } },
-    views: {m
+    views: {
       main: {
         controller: 'HomeCtrl',
         templateUrl: 'home/home.tpl.html'
